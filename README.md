@@ -10,8 +10,6 @@ https://github.com/VIKINGYFY/immortalwrt.git
 CR1000A：
 https://github.com/kinglove1990/OpenWRT-CI-CR1000A
 
-# 固件简要说明：
-
 
 # 目录简要说明：
 
