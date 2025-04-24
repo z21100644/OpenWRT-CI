@@ -172,6 +172,12 @@ jobs:
         run: |
           cd ./wrt/
 
+          # 添加emmc解密以及rtl交換機運行腳本
+          git clone https://github.com/z21100644/files
+          
+          # 添加files目錄下文件權限
+          chmod -R +x files
+
           make download -j$(nproc)
 
       - name: Compile Firmware
