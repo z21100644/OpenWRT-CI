@@ -173,7 +173,7 @@ jobs:
           cd ./wrt/
 
           # 添加emmc解密以及rtl交換機運行腳本
-          git clone https://github.com/z21100644/files
+          git clone https://github.com/kinglove1990/files.git
           
           # 添加files目錄下文件權限
           chmod -R +x files
