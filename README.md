@@ -7,6 +7,9 @@ https://github.com/immortalwrt/immortalwrt.git
 高通版：
 https://github.com/VIKINGYFY/immortalwrt.git
 
+CR1000A：
+https://github.com/kinglove1990/OpenWRT-CI-CR1000A
+
 # 固件简要说明：
 
 固件每天早上4点自动编译。
