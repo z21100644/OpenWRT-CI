@@ -1,8 +1,8 @@
 #科学插件调整
-CONFIG_PACKAGE_luci-app-homeproxy=y
+#CONFIG_PACKAGE_luci-app-homeproxy=n
 #增加插件
 CONFIG_PACKAGE_luci-app-autoreboot=y
-CONFIG_PACKAGE_luci-app-gecoosac=y
+#CONFIG_PACKAGE_luci-app-gecoosac=n
 CONFIG_PACKAGE_luci-app-netspeedtest=y
 CONFIG_PACKAGE_luci-app-partexp=y
 CONFIG_PACKAGE_luci-app-samba4=y
@@ -59,6 +59,10 @@ CONFIG_PACKAGE_kmod-usb-storage-uas=y
 CONFIG_PACKAGE_kmod-usb-uhci=y
 CONFIG_PACKAGE_kmod-usb-xhci=y
 CONFIG_PACKAGE_kmod-wireguard=y
+#添加spidev通过spi控制rtl9303
+CONFIG_PACKAGE_kmod-spi-dev=y
+#添加devmem协助RTL9303的lan口正常工作
+CONFIG_KERNEL_DEVMEM=y
 #组件调整
 CONFIG_PACKAGE_autocore=y
 CONFIG_PACKAGE_automount=y
@@ -86,3 +90,5 @@ CONFIG_PACKAGE_nand-utils=y
 CONFIG_PACKAGE_openssh-sftp-server=y
 CONFIG_PACKAGE_sfdisk=y
 CONFIG_PACKAGE_sgdisk=y
+#添加cryptsetup解密cr1000a的p28分区
+CONFIG_PACKAGE_cryptsetup=y
