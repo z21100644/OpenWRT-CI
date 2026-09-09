@@ -23,6 +23,8 @@ elif [ -f "$WIFI_UC" ]; then
 	sed -i "s/ssid='.*'/ssid='$WRT_SSID'/g" $WIFI_UC
 	#修改WIFI密码
 	sed -i "s/key='.*'/key='$WRT_WORD'/g" $WIFI_UC
+	#修改WIFI默认国家
+    sed -i "s|set \${s}\.country='\${country || ''}'|set \${s}\.country='US'|g" "$WIFI_UC"
 fi
 
 CFG_FILE="./package/base-files/files/bin/config_generate"
