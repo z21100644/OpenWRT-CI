@@ -24,7 +24,7 @@ elif [ -f "$WIFI_UC" ]; then
 	#修改WIFI密码
 	sed -i "s/key='.*'/key='$WRT_WORD'/g" $WIFI_UC
 	#修改WIFI默认国家
-    sed -i "s|set \${s}\.country='\${country || ''}'|set \${s}\.country='US'|g" "$WIFI_UC"
+	sed -i "s#set \${s}\.country='\${country || ''}'#set \${s}\.country='US'#g" "$WIFI_UC"
 fi
 
 #修正LTC Velo7 Max FIT rootfs依赖
