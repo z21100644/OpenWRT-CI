@@ -27,6 +27,12 @@ elif [ -f "$WIFI_UC" ]; then
     sed -i "s|set \${s}\.country='\${country || ''}'|set \${s}\.country='US'|g" "$WIFI_UC"
 fi
 
+#修正LTC Velo7 Max FIT rootfs依赖
+FILOGIC_MK="./target/linux/mediatek/image/filogic.mk"
+sed -i '/define Device\/ltc_vl7m19k/,/endef/ {
+	/KERNEL = kernel-bin/i\  KERNEL_DEPENDS += $$(KDIR)/root.squashfs
+}' "$FILOGIC_MK"
+
 CFG_FILE="./package/base-files/files/bin/config_generate"
 #修改默认IP地址
 sed -i "s/192\.168\.[0-9]*\.[0-9]*/$WRT_IP/g" $CFG_FILE
